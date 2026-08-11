@@ -198,7 +198,10 @@ svg {
 }
 
 .gameplay-destaque video {
+    display: block;
     width: min(100%, 1200px);
+    max-width: 1200px;
+    margin: 0 auto;
     border-radius: 10px;
 }
 
