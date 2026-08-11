@@ -226,7 +226,9 @@ svg {
     justify-items: center;
 }
 
-#gameplays .videos video {
+#gameplays .videos video,
+#gameplays .videos iframe {
+    display: block;
     width: min(100%, 900px);
     height: auto;
     aspect-ratio: 16 / 9;
