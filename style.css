@@ -50,7 +50,6 @@ a {
     align-items: center;
     gap: 20px;
     justify-content: center;
-    background: linear-gradient(to left, #534ab7, #16213e, #16213e);
     min-height: 350px;
     padding: 40px 20px;
     flex-wrap: wrap;
