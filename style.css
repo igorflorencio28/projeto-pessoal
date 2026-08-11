@@ -54,6 +54,10 @@ a {
     min-height: 350px;
     padding: 40px 20px;
     flex-wrap: wrap;
+    background-image: url(img/ds2-foto13.jpg);
+    background-size: cover;
+    background-position: 50% 65%;
+    background-repeat: no-repeat;
 }
 
 .introducao {
