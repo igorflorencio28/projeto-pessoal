@@ -59,6 +59,8 @@ a {
     background-repeat: no-repeat;
 }
 
+
+
 .introducao {
     display: grid;
     grid-template-columns: 1fr;
@@ -83,6 +85,7 @@ a {
     font-size: 18px;
     margin-top: 0px;
 }
+
 
 .selos {
     display: flex;
@@ -237,6 +240,7 @@ svg {
     background-color: #000;
 }
 
+
 @media (max-width: 900px) {
     #favoritos ul {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -307,5 +311,14 @@ svg {
 
     .gameplay-destaque {
         min-height: auto;
+    }
+}
+
+@media (max-width: 2560px) {
+    #quem-eu-sou {
+        background-size: cover;
+        background-position: 50% 49%;
+        background-repeat: no-repeat;
+        padding-bottom: 10px;
     }
 }
