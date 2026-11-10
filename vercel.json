@@ -1,0 +1,6 @@
+{
+  "framework": null,
+  "installCommand": "",
+  "buildCommand": "mkdir -p dist && cp -R index.html style.css gallery.js img videos dist/",
+  "outputDirectory": "dist"
+}
