@@ -1,100 +1,693 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Falso Pastor</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <h2 id="titulo">FalsoPastor</h2>
-        <nav>
-            <a href="">Início</a>
-            <a href="">Jogos</a>
-            <a href="">Fotos</a>
-            <a href="">Gameplays</a>
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#262e46" />
+    <meta
+      name="description"
+      content="O acervo gamer de Falso Pastor. Explore capturas de jogos, favoritos e gameplays."
+    />
+    <title>Falso Pastor — Jogos, capturas e gameplays</title>
+    <link rel="icon" href="img/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="gallery.js" defer></script>
+  </head>
+  <body>
+    <svg
+      class="icon-library"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+    >
+      <symbol id="gamepad" viewBox="0 0 24 24">
+        <path
+          d="M7 7h10a4 4 0 0 1 3.9 3.2l1 4.8a2.5 2.5 0 0 1-4.3 2.2L15 15H9l-2.6 2.2A2.5 2.5 0 0 1 2.1 15l1-4.8A4 4 0 0 1 7 7Z"
+        />
+        <path d="M8 9.5v4M6 11.5h4m5 0h.01m3-1h.01" />
+      </symbol>
+      <symbol id="arrow" viewBox="0 0 24 24">
+        <path d="M4 12h15m-6-6 6 6-6 6" />
+      </symbol>
+      <symbol id="play" viewBox="0 0 24 24">
+        <path d="m9 5 11 7-11 7z" />
+      </symbol>
+      <symbol id="camera" viewBox="0 0 24 24">
+        <path
+          d="M4 6h4l2-3h4l2 3h4a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2Z"
+        />
+        <circle cx="12" cy="13" r="4" />
+      </symbol>
+      <symbol id="expand" viewBox="0 0 24 24">
+        <path d="M14 4h6v6m0-6-6 6M4 14v6h6m-6 0 6-6" />
+      </symbol>
+      <symbol id="close" viewBox="0 0 24 24">
+        <path d="m6 6 12 12M18 6 6 18" />
+      </symbol>
+      <symbol id="chevron" viewBox="0 0 24 24">
+        <path d="m9 6 6 6-6 6" />
+      </symbol>
+    </svg>
+    <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+    <header class="site-header" id="inicio">
+      <div class="wrap header-inner">
+        <a class="brand" href="#inicio">
+          <span class="brand-icon"
+            ><svg aria-hidden="true" class="icon" viewBox="0 0 24 24">
+              <use href="#gamepad"></use></svg
+          ></span>
+          <span>FALSO<span class="brand-accent">PASTOR</span></span>
+        </a>
+        <nav aria-label="Menu principal">
+          <a href="#inicio">Início</a>
+          <a href="#aventuras">Galeria</a>
+          <a href="#favoritos">Jogos</a>
+          <a href="#gameplays">Gameplays</a>
         </nav>
+      </div>
     </header>
 
-    <main>
-        <section id="quem-eu-sou">
-            <img id="foto-falso" src="img/falso-pastor.jpg" alt="Falso Pastor">
-            <div class="introducao">
-                <h1>Falso Pastor</h1>
-                <p>Olá! Sejam bem vindos ao meu universo. Aqui compartilho meus games, screenshots e gameplays.</p>
-                <div class="selos">
-                    <span> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-device-gamepad-2"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M12 5h3.5a5 5 0 0 1 0 10h-5.5l-4.015 4.227a2.3 2.3 0 0 1 -3.923 -2.035l1.634 -8.173a5 5 0 0 1 4.904 -4.019h3.4" /><path d="M14 15l4.07 4.284a2.3 2.3 0 0 0 3.925 -2.023l-1.6 -8.232" /><path d="M8 9v2" /><path d="M7 10h2" /><path d="M14 10h2" /></svg>Bioshock Fan</span>
-                    <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-camera-selfie"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M5 7h1a2 2 0 0 0 2 -2a1 1 0 0 1 1 -1h6a1 1 0 0 1 1 1a2 2 0 0 0 2 2h1a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-9a2 2 0 0 1 2 -2" /><path d="M9.5 15a3.5 3.5 0 0 0 5 0" /><path d="M15 11l.01 0" /><path d="M9 11l.01 0" /></svg>Screenshot Hunter</span>
-                    <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-youtube"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M2 8a4 4 0 0 1 4 -4h12a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4v-8" /><path d="M10 9l5 3l-5 3l0 -6" /></svg>Content Creator</span>
-                </div>
+    <main id="conteudo">
+      <section class="hero" id="quem-eu-sou" aria-labelledby="hero-title">
+        <img
+          class="hero-image"
+          src="img/ds2-foto13.jpg"
+          alt=""
+          fetchpriority="high"
+        />
+        <div class="wrap hero-inner">
+          <div class="hero-content">
+            <div class="profile">
+              <img src="img/falso-pastor.jpg" width="38" height="38" alt="" />
+              <span>MEU DIÁRIO DE JOGOS</span>
             </div>
-        </section>
-
-        <!-- Lista de jogos favoritos -->
-        <section id="favoritos">
-            <h2><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-heart"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" /></svg> Jogos favoritos</h2>
-            <p>Uma seleção de jogos que mais me marcaram</p>
-            <ul>
-                <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-star"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873l-6.158 -3.245" /></svg> Franquia Bioshock</li>
-                <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-star"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873l-6.158 -3.245" /></svg> Death Stranding</li>
-                <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-star"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873l-6.158 -3.245" /></svg> Control</li>
-                <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-star"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873l-6.158 -3.245" /></svg> God of War</li>
-                <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-star"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873l-6.158 -3.245" /></svg> A Plague Tale</li>
-                <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-star"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873l-6.158 -3.245" /></svg> Dead Space Remake</li>
-                <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-star"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873l-6.158 -3.245" /></svg> The Evil Within</li>
-                <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-star"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873l-6.158 -3.245" /></svg> Resident Evil</li>
-            </ul>
-        </section>
-
-        <!-- Fotos das aventuras em destaque -->
-        <section id="aventuras">
-            <h2>Fotos das aventuras em destaque</h2>
-            <div class="fotos">
-                <a href="img/ds2-foto17.jpg"><img src="img/ds2-foto17.jpg" alt=""></a>
-                <a href="img/ds2-foto13.jpg"><img src="img/ds2-foto13.jpg" alt="Death Stranding 2"></a>
-                <a href="img/ds2-foto20.jpg"><img src="img/ds2-foto20.jpg" alt="Death Stranding 2"></a>
-                <a href="img/ds2-foto15.jpg"><img src="img/ds2-foto15.jpg" alt="Death Stranding 2"></a>
-                <a href="img/ds2-foto14.jpg"><img src="img/ds2-foto14.jpg" alt="Death Stranding 2"></a>
-                <a href="img/ds2-foto3.jpg"><img src="img/ds2-foto3.jpg" alt="Death Stranding 2"></a>
-                <a href="img/ds2-foto2.jpg"><img src="img/ds2-foto2.jpg" alt="Death Stranding 2"></a>
-                <a href="img/ds2-foto1.jpg"><img src="img/ds2-foto1.jpg" alt="Death Strading 2"></a>
-                <a href="img/throne-liberty-original.jpg"><img class="foto1"src="img/throne-liberty.png" alt="Throne and Liberty"></a>
-                <a href="img/re-village.jpeg"><img class="fot2" src="img/re-village.jpeg" alt="RE Village"></a>
-                <a href="img/bioshock-infinity-original.jpeg"><img class="foto3" src="img/bioshock-infinity-original.jpeg" alt="Bioshock Infinite"></a>
-                <a href="img/tomb-raider3.jpeg"><img class="foto4" src="img/tomb-raider3.jpeg" alt="Tomb Raider"></a>
-                <a href="img/new-world.jpeg"><img class="foto5" src="img/new-world.jpeg" alt="New World"></a>
-                <a href="img/a-plague-tale2.jpeg"><img class="foto6" src="img/a-plague-tale2.jpeg" alt="A Plague Tale2"></a>
-                <a href="img/darksider2.jpeg"><img class="foto7" src="img/darksider2.jpeg" alt="Darksiders2"></a>
-                <a href="img/the-evil-within.jpeg"><img class="foto8" src="img/the-evil-within.jpeg" alt="The Evil Within"></a>
+            <h1 id="hero-title">FALSO <span>PASTOR</span></h1>
+            <p>
+              Os jogos que me marcaram, os mundos que explorei e os momentos que
+              valem um replay.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#aventuras"
+                >Explorar galeria
+                <svg aria-hidden="true" class="icon" viewBox="0 0 24 24">
+                  <use href="#arrow"></use></svg
+              ></a>
+              <a class="button button-secondary" href="#gameplays"
+                ><svg aria-hidden="true" class="icon" viewBox="0 0 24 24">
+                  <use href="#play"></use>
+                </svg>
+                Ver gameplays</a
+              >
             </div>
-        </section>
+          </div>
+          <span class="hero-credit"
+            ><svg aria-hidden="true" class="icon" viewBox="0 0 24 24">
+              <use href="#camera"></use>
+            </svg>
+            Death Stranding 2</span
+          >
+        </div>
+      </section>
 
-        <!-- Gameplay em destaque -->
-        <section class="gameplay-destaque">
-            <h2>Gameplay em destaque</h2>
-            <video src="videos/Jogo muito.mp4" controls poster="img/thresh.jpg" width="1200px"></video>
-        </section>
+      <section
+        class="section wrap"
+        id="aventuras"
+        aria-labelledby="gallery-title"
+      >
+        <div class="section-heading">
+          <div>
+            <h2 id="gallery-title">Galeria de aventuras</h2>
+            <p>Meus registros favoritos de mundos dentro dos jogos.</p>
+          </div>
+          <span class="section-count"
+            ><svg aria-hidden="true" class="icon" viewBox="0 0 24 24">
+              <use href="#camera"></use>
+            </svg>
+            16 capturas</span
+          >
+        </div>
+        <div class="capture-grid capture-grid-featured">
+          <a
+            class="capture"
+            href="img/ds2-foto17.jpg"
+            data-title="Death Stranding 2"
+            aria-label="Ampliar captura 1 de Death Stranding 2"
+          >
+            <img
+              src="img/ds2-foto17.jpg"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            />
+            <span class="capture-label"
+              ><strong>Death Stranding 2</strong
+              ><span class="capture-expand"
+                ><svg aria-hidden="true" class="icon" viewBox="0 0 24 24">
+                  <use href="#expand"></use></svg></span
+            ></span>
+          </a>
+          <a
+            class="capture"
+            href="img/bioshock-infinity-original.jpeg"
+            data-title="BioShock Infinite"
+            aria-label="Ampliar captura 2 de BioShock Infinite"
+          >
+            <img
+              src="img/bioshock-infinity-original.jpeg"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            />
+            <span class="capture-label"
+              ><strong>BioShock Infinite</strong
+              ><span class="capture-expand"
+                ><svg aria-hidden="true" class="icon" viewBox="0 0 24 24">
+                  <use href="#expand"></use></svg></span
+            ></span>
+          </a>
+          <a
+            class="capture"
+            href="img/a-plague-tale2.jpeg"
+            data-title="A Plague Tale: Requiem"
+            aria-label="Ampliar captura 3 de A Plague Tale: Requiem"
+          >
+            <img
+              src="img/a-plague-tale2.jpeg"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            />
+            <span class="capture-label"
+              ><strong>A Plague Tale: Requiem</strong
+              ><span class="capture-expand"
+                ><svg aria-hidden="true" class="icon" viewBox="0 0 24 24">
+                  <use href="#expand"></use></svg></span
+            ></span>
+          </a>
+          <a
+            class="capture"
+            href="img/throne-liberty-original.jpg"
+            data-title="Throne and Liberty"
+            aria-label="Ampliar captura 4 de Throne and Liberty"
+          >
+            <img
+              src="img/throne-liberty.png"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            />
+            <span class="capture-label"
+              ><strong>Throne and Liberty</strong
+              ><span class="capture-expand"
+                ><svg aria-hidden="true" class="icon" viewBox="0 0 24 24">
+                  <use href="#expand"></use></svg></span
+            ></span>
+          </a>
+        </div>
+        <details class="gallery-more">
+          <summary>
+            <span class="show-label">Ver todas as capturas</span
+            ><span class="hide-label">Recolher galeria</span
+            ><svg aria-hidden="true" class="icon" viewBox="0 0 24 24">
+              <use href="#chevron"></use>
+            </svg>
+          </summary>
+          <div class="capture-grid capture-grid-extra">
+            <a
+              class="capture"
+              href="img/ds2-foto13.jpg"
+              data-title="Death Stranding 2"
+              aria-label="Ampliar captura 5 de Death Stranding 2"
+            >
+              <img
+                src="img/ds2-foto13.jpg"
+                alt=""
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="capture-label"
+                ><strong>Death Stranding 2</strong
+                ><span class="capture-expand"
+                  ><svg aria-hidden="true" class="icon" viewBox="0 0 24 24">
+                    <use href="#expand"></use></svg></span
+              ></span>
+            </a>
+            <a
+              class="capture"
+              href="img/ds2-foto20.jpg"
+              data-title="Death Stranding 2"
+              aria-label="Ampliar captura 6 de Death Stranding 2"
+            >
+              <img
+                src="img/ds2-foto20.jpg"
+                alt=""
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="capture-label"
+                ><strong>Death Stranding 2</strong
+                ><span class="capture-expand"
+                  ><svg aria-hidden="true" class="icon" viewBox="0 0 24 24">
+                    <use href="#expand"></use></svg></span
+              ></span>
+            </a>
+            <a
+              class="capture"
+              href="img/ds2-foto15.jpg"
+              data-title="Death Stranding 2"
+              aria-label="Ampliar captura 7 de Death Stranding 2"
+            >
+              <img
+                src="img/ds2-foto15.jpg"
+                alt=""
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="capture-label"
+                ><strong>Death Stranding 2</strong
+                ><span class="capture-expand"
+                  ><svg aria-hidden="true" class="icon" viewBox="0 0 24 24">
+                    <use href="#expand"></use></svg></span
+              ></span>
+            </a>
+            <a
+              class="capture"
+              href="img/ds2-foto14.jpg"
+              data-title="Death Stranding 2"
+              aria-label="Ampliar captura 8 de Death Stranding 2"
+            >
+              <img
+                src="img/ds2-foto14.jpg"
+                alt=""
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="capture-label"
+                ><strong>Death Stranding 2</strong
+                ><span class="capture-expand"
+                  ><svg aria-hidden="true" class="icon" viewBox="0 0 24 24">
+                    <use href="#expand"></use></svg></span
+              ></span>
+            </a>
+            <a
+              class="capture"
+              href="img/ds2-foto3.jpg"
+              data-title="Death Stranding 2"
+              aria-label="Ampliar captura 9 de Death Stranding 2"
+            >
+              <img
+                src="img/ds2-foto3.jpg"
+                alt=""
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="capture-label"
+                ><strong>Death Stranding 2</strong
+                ><span class="capture-expand"
+                  ><svg aria-hidden="true" class="icon" viewBox="0 0 24 24">
+                    <use href="#expand"></use></svg></span
+              ></span>
+            </a>
+            <a
+              class="capture"
+              href="img/ds2-foto2.jpg"
+              data-title="Death Stranding 2"
+              aria-label="Ampliar captura 10 de Death Stranding 2"
+            >
+              <img
+                src="img/ds2-foto2.jpg"
+                alt=""
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="capture-label"
+                ><strong>Death Stranding 2</strong
+                ><span class="capture-expand"
+                  ><svg aria-hidden="true" class="icon" viewBox="0 0 24 24">
+                    <use href="#expand"></use></svg></span
+              ></span>
+            </a>
+            <a
+              class="capture"
+              href="img/ds2-foto1.jpg"
+              data-title="Death Stranding 2"
+              aria-label="Ampliar captura 11 de Death Stranding 2"
+            >
+              <img
+                src="img/ds2-foto1.jpg"
+                alt=""
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="capture-label"
+                ><strong>Death Stranding 2</strong
+                ><span class="capture-expand"
+                  ><svg aria-hidden="true" class="icon" viewBox="0 0 24 24">
+                    <use href="#expand"></use></svg></span
+              ></span>
+            </a>
+            <a
+              class="capture"
+              href="img/re-village.jpeg"
+              data-title="Resident Evil Village"
+              aria-label="Ampliar captura 12 de Resident Evil Village"
+            >
+              <img
+                src="img/re-village.jpeg"
+                alt=""
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="capture-label"
+                ><strong>Resident Evil Village</strong
+                ><span class="capture-expand"
+                  ><svg aria-hidden="true" class="icon" viewBox="0 0 24 24">
+                    <use href="#expand"></use></svg></span
+              ></span>
+            </a>
+            <a
+              class="capture"
+              href="img/tomb-raider3.jpeg"
+              data-title="Tomb Raider"
+              aria-label="Ampliar captura 13 de Tomb Raider"
+            >
+              <img
+                src="img/tomb-raider3.jpeg"
+                alt=""
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="capture-label"
+                ><strong>Tomb Raider</strong
+                ><span class="capture-expand"
+                  ><svg aria-hidden="true" class="icon" viewBox="0 0 24 24">
+                    <use href="#expand"></use></svg></span
+              ></span>
+            </a>
+            <a
+              class="capture"
+              href="img/new-world.jpeg"
+              data-title="New World"
+              aria-label="Ampliar captura 14 de New World"
+            >
+              <img
+                src="img/new-world.jpeg"
+                alt=""
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="capture-label"
+                ><strong>New World</strong
+                ><span class="capture-expand"
+                  ><svg aria-hidden="true" class="icon" viewBox="0 0 24 24">
+                    <use href="#expand"></use></svg></span
+              ></span>
+            </a>
+            <a
+              class="capture"
+              href="img/darksider2.jpeg"
+              data-title="Darksiders II"
+              aria-label="Ampliar captura 15 de Darksiders II"
+            >
+              <img
+                src="img/darksider2.jpeg"
+                alt=""
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="capture-label"
+                ><strong>Darksiders II</strong
+                ><span class="capture-expand"
+                  ><svg aria-hidden="true" class="icon" viewBox="0 0 24 24">
+                    <use href="#expand"></use></svg></span
+              ></span>
+            </a>
+            <a
+              class="capture"
+              href="img/the-evil-within.jpeg"
+              data-title="The Evil Within"
+              aria-label="Ampliar captura 16 de The Evil Within"
+            >
+              <img
+                src="img/the-evil-within.jpeg"
+                alt=""
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="capture-label"
+                ><strong>The Evil Within</strong
+                ><span class="capture-expand"
+                  ><svg aria-hidden="true" class="icon" viewBox="0 0 24 24">
+                    <use href="#expand"></use></svg></span
+              ></span>
+            </a>
+          </div>
+        </details>
+      </section>
 
-        <!-- Gameplays -->
-         <section id="gameplays">
-            <h2><img src="icons/jogar.png" width="25"alt="play"> Minhas gameplays</h2>
-            <div class="videos">
-                <!-- vídeo hi fi rush -->
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/UU8iWlK4qpA?si=UqjMceLsHEbnvUk-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                
-                <!-- vídeo ARAM -->
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/RPirGpR0-Rw?si=qgXuMzgvstuij7XV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <section
+        class="section wrap"
+        id="favoritos"
+        aria-labelledby="games-title"
+      >
+        <div class="section-heading">
+          <div>
+            <h2 id="games-title">Jogos favoritos</h2>
+            <p>Uma seleção dos jogos que mais me marcaram.</p>
+          </div>
+        </div>
+        <ul class="game-grid">
+          <li class="game-card">
+            <img
+              src="img/bioshock-arcadia.jpeg"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            />
+            <div><span>Franquia</span><strong>BioShock</strong></div>
+          </li>
+          <li class="game-card">
+            <img
+              src="img/ds2-foto13.jpg"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            />
+            <div><span>Franquia</span><strong>Death Stranding</strong></div>
+          </li>
+          <li class="game-card">
+            <img
+              src="img/a-plague-tale2-paisagem.jpeg"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            />
+            <div><span>Franquia</span><strong>A Plague Tale</strong></div>
+          </li>
+          <li class="game-card">
+            <img
+              src="img/re-village-paisagem.jpeg"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            />
+            <div><span>Franquia</span><strong>Resident Evil</strong></div>
+          </li>
+        </ul>
+        <ul class="game-list" aria-label="Mais jogos favoritos">
+          <li>Control</li>
+          <li>God of War</li>
+          <li>Dead Space Remake</li>
+          <li>The Evil Within</li>
+        </ul>
+      </section>
 
-                <!-- vídeo DBD -->
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/t3nAe-XiLUQ?si=Hp2ZxtSq0zP7jQcF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-                <!-- vídeo Cry of Fear -->
-                <video src="https://ukoryalyubfdfetlhzrh.supabase.co/storage/v1/object/public/videos/cry-of-fear01%20(1).mp4" type="video/mp4" controls poster="img/cry-of-fear-imagem-capa.jpg" ></video>
-                <video src="https://ukoryalyubfdfetlhzrh.supabase.co/storage/v1/object/public/videos/cry-of-fear02.mp4" type="video/mp4" controls poster="img/cry-of-fear-imagem-capa.jpg" ></video>
-                <video src="https://ukoryalyubfdfetlhzrh.supabase.co/storage/v1/object/public/videos/cry-of-fear03.mp4" type="video/mp4" controls poster="img/cry-of-fear-imagem-capa.jpg" ></video>
-            </div>
-         </section>
+      <section
+        class="section wrap"
+        id="gameplays"
+        aria-labelledby="videos-title"
+      >
+        <div class="section-heading">
+          <div>
+            <h2 id="videos-title">Minhas gameplays</h2>
+            <p>Partidas, melhores momentos e séries.</p>
+          </div>
+        </div>
+        <article class="featured-video">
+          <video
+            src="videos/Jogo%20muito.mp4"
+            controls
+            playsinline
+            preload="none"
+            poster="img/thresh.jpg"
+            aria-label="Jogo muito"
+          ></video>
+          <div>
+            <p class="featured-label">
+              <svg aria-hidden="true" class="icon" viewBox="0 0 24 24">
+                <use href="#play"></use>
+              </svg>
+              Gameplay em destaque
+            </p>
+            <h3>Jogo muito</h3>
+          </div>
+        </article>
+        <div class="video-grid">
+          <article class="video-card">
+            <iframe
+              src="https://www.youtube.com/embed/UU8iWlK4qpA?si=UqjMceLsHEbnvUk-"
+              title="Gameplay de Hi-Fi Rush"
+              loading="lazy"
+              allow="
+                accelerometer;
+                autoplay;
+                clipboard-write;
+                encrypted-media;
+                gyroscope;
+                picture-in-picture;
+                web-share;
+              "
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+            <h3>Hi-Fi Rush</h3>
+          </article>
+          <article class="video-card">
+            <iframe
+              src="https://www.youtube.com/embed/RPirGpR0-Rw?si=qgXuMzgvstuij7XV"
+              title="Gameplay de League of Legends · ARAM"
+              loading="lazy"
+              allow="
+                accelerometer;
+                autoplay;
+                clipboard-write;
+                encrypted-media;
+                gyroscope;
+                picture-in-picture;
+                web-share;
+              "
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+            <h3>League of Legends · ARAM</h3>
+          </article>
+          <article class="video-card">
+            <iframe
+              src="https://www.youtube.com/embed/t3nAe-XiLUQ?si=Hp2ZxtSq0zP7jQcF"
+              title="Gameplay de Dead by Daylight"
+              loading="lazy"
+              allow="
+                accelerometer;
+                autoplay;
+                clipboard-write;
+                encrypted-media;
+                gyroscope;
+                picture-in-picture;
+                web-share;
+              "
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+            <h3>Dead by Daylight</h3>
+          </article>
+          <article class="video-card">
+            <video
+              src="https://ukoryalyubfdfetlhzrh.supabase.co/storage/v1/object/public/videos/cry-of-fear01%20(1).mp4"
+              controls
+              playsinline
+              preload="none"
+              poster="img/cry-of-fear-imagem-capa.jpg"
+              aria-label="Cry of Fear, parte 1"
+            ></video>
+            <h3>Cry of Fear <span>· Parte 1</span></h3>
+          </article>
+          <article class="video-card">
+            <video
+              src="https://ukoryalyubfdfetlhzrh.supabase.co/storage/v1/object/public/videos/cry-of-fear02.mp4"
+              controls
+              playsinline
+              preload="none"
+              poster="img/cry-of-fear-imagem-capa.jpg"
+              aria-label="Cry of Fear, parte 2"
+            ></video>
+            <h3>Cry of Fear <span>· Parte 2</span></h3>
+          </article>
+          <article class="video-card">
+            <video
+              src="https://ukoryalyubfdfetlhzrh.supabase.co/storage/v1/object/public/videos/cry-of-fear03.mp4"
+              controls
+              playsinline
+              preload="none"
+              poster="img/cry-of-fear-imagem-capa.jpg"
+              aria-label="Cry of Fear, parte 3"
+            ></video>
+            <h3>Cry of Fear <span>· Parte 3</span></h3>
+          </article>
+        </div>
+      </section>
     </main>
-</body>
+
+    <footer class="site-footer">
+      <div class="wrap footer-inner">
+        <a class="brand" href="#inicio"
+          ><span class="brand-icon"
+            ><svg aria-hidden="true" class="icon" viewBox="0 0 24 24">
+              <use href="#gamepad"></use></svg></span
+          ><span>FALSO<span class="brand-accent">PASTOR</span></span></a
+        >
+        <a class="back-top" href="#inicio">Voltar ao início ↑</a>
+      </div>
+    </footer>
+
+    <dialog class="lightbox" aria-label="Visualizador de capturas">
+      <div class="lightbox-bar">
+        <p class="lightbox-caption" aria-live="polite"></p>
+        <a
+          class="lightbox-original"
+          target="_blank"
+          rel="noopener"
+          aria-label="Abrir imagem original em nova aba"
+        >
+          <svg aria-hidden="true" class="icon" viewBox="0 0 24 24">
+            <use href="#expand"></use>
+          </svg>
+          <span>Imagem original</span>
+        </a>
+        <form method="dialog">
+          <button class="icon-button" aria-label="Fechar galeria" autofocus>
+            <svg aria-hidden="true" class="icon" viewBox="0 0 24 24">
+              <use href="#close"></use>
+            </svg>
+          </button>
+        </form>
+      </div>
+      <img class="lightbox-image" alt="" />
+      <div class="lightbox-controls">
+        <button
+          type="button"
+          class="icon-button previous"
+          aria-label="Captura anterior"
+        >
+          <svg aria-hidden="true" class="icon" viewBox="0 0 24 24">
+            <use href="#chevron"></use>
+          </svg>
+        </button>
+        <span class="lightbox-count"></span>
+        <button
+          type="button"
+          class="icon-button next"
+          aria-label="Próxima captura"
+        >
+          <svg aria-hidden="true" class="icon" viewBox="0 0 24 24">
+            <use href="#chevron"></use>
+          </svg>
+        </button>
+      </div>
+    </dialog>
+  </body>
 </html>
